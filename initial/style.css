@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 24px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ecebeb;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.step {
+  display: flex;
+}
+
+.step__val {
+  height: 45px;
+  width: 45px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 5px solid rgba(222, 227, 231, 0.918);
+  position: relative;
+  text-align: center;
+  font-size: 17px;
+}
+
+.step__val::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  z-index: -1;
+  top: 35%;
+  left: 25%;
+  border: 3px solid #333;
+}
+
+.step__val:first-child::before {
+  display: none;
+}
+
+.step__val.active__step {
+  border: 5px solid rgb(76, 140, 192);
+}
+
+.span__val {
+  position: absolute;
+  top: 7.5px;
+  left: 18px;
+}
+
+.button {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.button_primary {
+  height: 40px;
+  width: 100px;
+  margin-right: 10px;
+  background-color: rgb(231, 224, 224);
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  border-radius: 9px;
+  padding-top: 5px;
+  border: 2px solid rgba(222, 227, 231, 0.788);
+}
+
+.button_primary.active__button {
+  background-color: rgb(76, 140, 192);
+}
